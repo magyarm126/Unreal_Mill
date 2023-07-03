@@ -3,3 +3,7 @@
 
 #include "malomGameModeBase.h"
 
+AmalomGameModeBase::AmalomGameModeBase()
+{
+	DefaultPawnClass = AAPlayer::StaticClass();
+}

@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "APlayer.h"
 #include "GameFramework/GameModeBase.h"
 #include "malomGameModeBase.generated.h"
 
@@ -13,5 +14,7 @@ UCLASS()
 class MALOM_API AmalomGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
+public:
+	AmalomGameModeBase();
 };
