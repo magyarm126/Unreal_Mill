@@ -22,11 +22,17 @@ void AAGrid::BeginPlay()
 {
 	Super::BeginPlay();
 
-	for (int i = 0; i < 10; ++i)
+	int RowCount = 3;
+	int ColumnCount = 3;
+	
+	for (int i = 0; i < RowCount; ++i)
 	{
-		FTransform ActorTransform = GetActorTransform();
-		ActorTransform.SetTranslation({i * OffsetVector.X, i * OffsetVector.Y, 0});
-		GetWorld()->SpawnActor<AGridItem>(GridItem, ActorTransform);	
+		for (int j = 0; j < ColumnCount; ++j)
+		{
+			FTransform ActorTransform = GetActorTransform();
+			ActorTransform.SetTranslation({(RowCount/2 - i) * OffsetVector.X, (ColumnCount/2 - j) * OffsetVector.Y, 0});
+			GetWorld()->SpawnActor<AGridItem>(GridItem, ActorTransform);	
+		}
 	}
 }
 
