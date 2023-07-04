@@ -14,7 +14,4 @@ UCLASS()
 class MALOM_API AmalomGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-
-public:
-	AmalomGameModeBase();
 };
