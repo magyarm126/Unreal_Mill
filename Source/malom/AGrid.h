@@ -21,6 +21,9 @@ public:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AGridItem> GridItem;
 
+	UPROPERTY(EditAnywhere)
+	FVector2f OffsetVector = {100l, 100l};
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
