@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "APlayer.h"
 #include "GameFramework/GameModeBase.h"
 #include "malomGameModeBase.generated.h"
 
