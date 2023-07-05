@@ -27,10 +27,10 @@ void AAGrid::BeginPlay()
 
 			auto IndexString = "[" + std::to_string(i) + "," + std::to_string(j) + "]";
 			NewGridItem->SetActorLabel(NewGridItem->GetActorLabel() + IndexString.c_str());
-
-			TempArray.Add(NewGridItem);
+			
+			TempArray.Add(std::move(NewGridItem));
 		}
-		Matrix.Add(TempArray);
+		Matrix.Add(std::move(TempArray));
 	}
 
 	for (int i = 0; i < Matrix.Num(); ++i)
