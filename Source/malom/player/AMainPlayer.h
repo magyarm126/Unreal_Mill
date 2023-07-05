@@ -5,28 +5,18 @@
 #include "CoreMinimal.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/Pawn.h"
-#include "APlayer.generated.h"
+#include "AMainPlayer.generated.h"
 
 UCLASS()
-class MALOM_API AAPlayer : public APawn
+class MALOM_API AMainPlayer : public APawn
 {
 	GENERATED_BODY()
 
-public:
-	// Sets default values for this pawn's properties
-	AAPlayer();
-
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
 	UPROPERTY(EditAnywhere)
 	UCameraComponent* Camera;
 
 public:
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
+	AMainPlayer();
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 };
