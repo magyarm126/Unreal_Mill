@@ -21,7 +21,7 @@ void AAGrid::BeginPlay()
 		{
 			FTransform ActorTransform = GetActorTransform();
 			ActorTransform.SetTranslation({
-				(RowCount / 2 - i) * OffsetVector.X, (ColumnCount / 2 - j) * OffsetVector.Y, 0
+				(RowCount / 2 - i) * OffsetVector.X, (ColumnCount / 2 - j) * -OffsetVector.Y, 0
 			});
 			AGridItem* NewGridItem = GetWorld()->SpawnActor<AGridItem>(GridItem, ActorTransform);
 

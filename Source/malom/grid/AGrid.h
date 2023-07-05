@@ -19,7 +19,7 @@ public:
 	TSubclassOf<AGridItem> GridItem;
 
 	UPROPERTY(EditAnywhere)
-	FVector2f OffsetVector = {100l, 100l};
+	FVector2f OffsetVector = {150l, 150l};
 
 	UPROPERTY(EditAnywhere)
 	int RowCount = 3;
