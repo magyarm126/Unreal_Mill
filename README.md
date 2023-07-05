@@ -1,3 +1,3 @@
-# malom
+# Mill Game against AI
 
-Developed with Unreal Engine 5
+Custom neural network as artificial intelligence, inside Unreal Engine 5.2
