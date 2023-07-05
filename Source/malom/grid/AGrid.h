@@ -9,12 +9,10 @@ UCLASS()
 class MALOM_API AAGrid : public AActor
 {
 	GENERATED_BODY()
-	
+
 public:
 	AAGrid();
-	
-	TArray<TArray<AGridItem*>> Matrix;
-	
+
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AGridItem> GridItem;
 
@@ -29,4 +27,6 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
+
+	TArray<TArray<AGridItem*>> Matrix;
 };

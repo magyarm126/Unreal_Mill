@@ -11,6 +11,11 @@ void AGridItem::ChangeState(const EMillNodeState NewState)
 	UpdateColor();
 }
 
+EMillNodeState AGridItem::GetState() const
+{
+	return InternalState;
+}
+
 void AGridItem::UpdateColor()
 {
 	FLinearColor NewColor = FLinearColor::Yellow;

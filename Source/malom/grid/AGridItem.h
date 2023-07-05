@@ -15,6 +15,8 @@ public:
 
 	void ChangeState(EMillNodeState NewState);
 
+	EMillNodeState GetState() const;
+
 protected:
 	EMillNodeState InternalState = Neutral;
 
