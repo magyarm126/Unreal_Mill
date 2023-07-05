@@ -18,13 +18,33 @@ void AAGrid::BeginPlay()
 	AGridItem* Baller = nullptr;
 	for (int i = 0; i < RowCount; ++i)
 	{
+		TArray<AGridItem*> TempArray = TArray<AGridItem*>();
 		for (int j = 0; j < ColumnCount; ++j)
 		{
 			FTransform ActorTransform = GetActorTransform();
 			ActorTransform.SetTranslation({(RowCount/2 - i) * OffsetVector.X, (ColumnCount/2 - j) * OffsetVector.Y, 0});
 			Baller = GetWorld()->SpawnActor<AGridItem>(GridItem, ActorTransform);
+			TempArray.Add(Baller);
+		}
+		Matrix.Add(TempArray);
+	}
+	
+	for (int i = 0; i < Matrix.Num(); ++i)
+	{
+		for (int j = 0; j < Matrix[i].Num(); ++j)
+		{
+			Matrix[i][j]->ChangeState(EMillNodeState((i+j)%2+1));
 		}
 	}
-	Baller->ChangeState(P1);
+
+
+	Matrix[1][1]->ChangeState(Neutral);
+	for (int i = 0; i < Matrix.Num(); ++i)
+	{
+		for (int j = 0; j < Matrix[i].Num(); ++j)
+		{
+			//Matrix[i][j]->ChangeState(EMillNodeState((i+j)%2+1));
+		}
+	}
 }
 	

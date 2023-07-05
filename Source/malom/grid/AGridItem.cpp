@@ -18,10 +18,13 @@ void AGridItem::UpdateColor()
 	{
 	case Neutral:
 		NewColor = FLinearColor::White;
+		break;
 	case P1:
 		NewColor = FLinearColor::Red;
+		break;
 	case P2:
 		NewColor = FLinearColor::Green;
+		break;
 	}
 
 	TSet<UActorComponent*> Components = GetComponents();

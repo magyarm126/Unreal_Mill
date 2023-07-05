@@ -13,7 +13,7 @@ class MALOM_API AAGrid : public AActor
 public:
 	AAGrid();
 	
-	TArray<TArray<AGridItem>> Matrix;
+	TArray<TArray<AGridItem*>> Matrix;
 	
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<AGridItem> GridItem;
