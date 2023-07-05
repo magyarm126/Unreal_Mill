@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "malom/model/MillNodeState.h"
 #include "AGridItem.generated.h"
 
 UCLASS()
@@ -11,4 +12,11 @@ class MALOM_API AGridItem : public AActor
 
 public:
 	AGridItem();
+
+	void ChangeState(EMillNodeState NewState);
+
+protected:
+	EMillNodeState InternalState = Neutral;
+
+	void UpdateColor();
 };

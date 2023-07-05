@@ -25,20 +25,6 @@ void AAGrid::BeginPlay()
 			Baller = GetWorld()->SpawnActor<AGridItem>(GridItem, ActorTransform);
 		}
 	}
-
-	auto a = Baller->GetComponents();
-	for (auto A : a)
-	{
-		if (A->GetClass() == UStaticMeshComponent::StaticClass())
-		{
-			UStaticMeshComponent* StaticMeshComponent = dynamic_cast<UStaticMeshComponent*>(A);
-			UMaterialInterface* MaterialInterface = StaticMeshComponent->GetMaterial(0);
-
-			UMaterialInstanceDynamic* DynamicMaterial = UMaterialInstanceDynamic::Create(MaterialInterface, this);
-			DynamicMaterial->SetVectorParameterValue(FName(TEXT("Color")), FLinearColor::Red);
-			
-			StaticMeshComponent->SetMaterial(0, DynamicMaterial);
-		}
-	}
+	Baller->ChangeState(P1);
 }
 	
