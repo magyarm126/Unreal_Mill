@@ -33,17 +33,7 @@ void AAGrid::BeginPlay()
 	{
 		for (int j = 0; j < Matrix[i].Num(); ++j)
 		{
-			Matrix[i][j]->ChangeState(EMillNodeState((i+j)%2+1));
-		}
-	}
-
-
-	Matrix[1][1]->ChangeState(Neutral);
-	for (int i = 0; i < Matrix.Num(); ++i)
-	{
-		for (int j = 0; j < Matrix[i].Num(); ++j)
-		{
-			//Matrix[i][j]->ChangeState(EMillNodeState((i+j)%2+1));
+			Matrix[i][j]->ChangeState(static_cast<EMillNodeState>((i + j) % 2 + 1));
 		}
 	}
 }

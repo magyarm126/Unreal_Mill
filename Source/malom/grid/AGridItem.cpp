@@ -35,10 +35,17 @@ void AGridItem::UpdateColor()
 			UStaticMeshComponent* StaticMeshComponent = dynamic_cast<UStaticMeshComponent*>(Component);
 			UMaterialInterface* MaterialInterface = StaticMeshComponent->GetMaterial(0);
 
-			UMaterialInstanceDynamic* DynamicMaterial = UMaterialInstanceDynamic::Create(MaterialInterface, this);
-			DynamicMaterial->SetVectorParameterValue(FName(TEXT("Color")), NewColor);
-
-			StaticMeshComponent->SetMaterial(0, DynamicMaterial);
+			if (MaterialInterface->GetClass() == UMaterialInstanceDynamic::StaticClass())
+			{
+				UMaterialInstanceDynamic* DynamicMaterial = dynamic_cast<UMaterialInstanceDynamic*>(MaterialInterface);
+				DynamicMaterial->SetVectorParameterValue(FName(TEXT("Color")), NewColor);
+			}
+			else
+			{
+				UMaterialInstanceDynamic* DynamicMaterial = UMaterialInstanceDynamic::Create(MaterialInterface, this);
+				DynamicMaterial->SetVectorParameterValue(FName(TEXT("Color")), NewColor);
+				StaticMeshComponent->SetMaterial(0, DynamicMaterial);
+			}
 		}
 	}
 }
