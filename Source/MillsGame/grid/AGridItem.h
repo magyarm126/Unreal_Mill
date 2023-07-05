@@ -2,11 +2,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "malom/model/MillNodeState.h"
+#include "MillsGame/model/MillNodeState.h"
 #include "AGridItem.generated.h"
 
 UCLASS()
-class MALOM_API AGridItem : public AActor
+class MILLSGAME_API AGridItem : public AActor
 {
 	GENERATED_BODY()
 

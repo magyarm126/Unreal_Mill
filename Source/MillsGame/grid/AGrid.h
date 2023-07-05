@@ -6,7 +6,7 @@
 #include "AGrid.generated.h"
 
 UCLASS()
-class MALOM_API AAGrid : public AActor
+class MILLSGAME_API AAGrid : public AActor
 {
 	GENERATED_BODY()
 

@@ -3,13 +3,13 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class malomEditorTarget : TargetRules
+public class MillsGameEditorTarget : TargetRules
 {
-	public malomEditorTarget( TargetInfo Target) : base(Target)
+	public MillsGameEditorTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;
-		ExtraModuleNames.Add("malom");
+		ExtraModuleNames.Add("MillsGame");
 	}
 }

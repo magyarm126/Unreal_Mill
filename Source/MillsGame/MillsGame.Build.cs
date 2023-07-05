@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class malom : ModuleRules
+public class MillsGame : ModuleRules
 {
-	public malom(ReadOnlyTargetRules Target) : base(Target)
+	public MillsGame(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	

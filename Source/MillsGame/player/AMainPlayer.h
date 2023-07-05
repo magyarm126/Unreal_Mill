@@ -8,7 +8,7 @@
 #include "AMainPlayer.generated.h"
 
 UCLASS()
-class MALOM_API AMainPlayer : public APawn
+class MILLSGAME_API AMainPlayer : public APawn
 {
 	GENERATED_BODY()
 
