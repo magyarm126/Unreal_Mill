@@ -21,6 +21,12 @@ public:
 	UPROPERTY(EditAnywhere)
 	FVector2f OffsetVector = {100l, 100l};
 
+	UPROPERTY(EditAnywhere)
+	int RowCount = 3;
+
+	UPROPERTY(EditAnywhere)
+	int ColumnCount = 3;
+
 protected:
 	virtual void BeginPlay() override;
 };

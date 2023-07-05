@@ -11,10 +11,7 @@ AAGrid::AAGrid()
 void AAGrid::BeginPlay()
 {
 	Super::BeginPlay();
-
-	int RowCount = 3;
-	int ColumnCount = 3;
-
+	
 	AGridItem* Baller = nullptr;
 	for (int i = 0; i < RowCount; ++i)
 	{
