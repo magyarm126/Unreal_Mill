@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 public class MillsGameEditorTarget : TargetRules
 {
-	public MillsGameEditorTarget( TargetInfo Target) : base(Target)
+	public MillsGameEditorTarget( TargetInfo targetInfo) : base(targetInfo)
 	{
 		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;
+		DefaultBuildSettings = BuildSettingsVersion.V3;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3;
 		ExtraModuleNames.Add("MillsGame");
 	}
 }
